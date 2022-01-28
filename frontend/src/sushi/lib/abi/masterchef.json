@@ -323,11 +323,6 @@
 				"type": "uint256"
 			},
 			{
-				"internalType": "uint256",
-				"name": "_allEndBlock",
-				"type": "uint256"
-			},
-			{
 				"internalType": "address",
 				"name": "_mistFarmingAddr",
 				"type": "address"
@@ -340,19 +335,6 @@
 		],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
-	},
-	{
-		"inputs": [],
-		"name": "allEndBlock",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
 	},
 	{
 		"inputs": [],
