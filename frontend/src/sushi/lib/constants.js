@@ -40,15 +40,15 @@
 
 export const contractAddresses = {
   sushi: {
-    10000: '0x3DCe3Df628687346B46d4A65D04CA1aB1DCd97fe', // FOGToken address
+    10000: '0x2191fC9678ff28367c231C6Ba4D47831DC1Dfc33', // FOGToken address
     // 10001: '0x43a7903E3a839a67192151eE300e11198985E54b', // sushi
-    10001: '0x3DCe3Df628687346B46d4A65D04CA1aB1DCd97fe', // FOGToken address
+    10001: '0x2191fC9678ff28367c231C6Ba4D47831DC1Dfc33', // FOGToken address
     // 10000: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2', // sushi use
   },
   masterChef: {
-    10000: '0x25E1192964d14A5b59E81b8F3A5f8503ccE22050', // FOGFarming address
+    10000: '0x5B414DB0d31A59BbFb9522F181A4ee181B3abe53', // FOGFarming address
     // 10001: '0x245A074cA9814fB46A21562bC70fAB92F8A3F779', // sushi
-    10001: '0x25E1192964d14A5b59E81b8F3A5f8503ccE22050', // FOGFarming address
+    10001: '0x5B414DB0d31A59BbFb9522F181A4ee181B3abe53', // FOGFarming address
     // 10000: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // sushi use
   },
   weth: {
@@ -136,7 +136,7 @@ export const supportedPools = [
     },
     tokenAddresses: {
       10001: '',
-      10000: '0x3DCe3Df628687346B46d4A65D04CA1aB1DCd97fe',
+      10000: '0x2191fC9678ff28367c231C6Ba4D47831DC1Dfc33',
     },
     name: 'FOG Party!',
     symbol: 'BCH-FlexUSD',
@@ -152,7 +152,7 @@ export const supportedPools = [
     },
     tokenAddresses: {
       10001: '0xf2c73AF42FbAC096FE8F591899C5fc8bCB13884B',
-      10000: '0x3DCe3Df628687346B46d4A65D04CA1aB1DCd97fe',
+      10000: '0x2191fC9678ff28367c231C6Ba4D47831DC1Dfc33',
     },
     name: 'elf love FOG!🧝🍱',
     symbol: 'FOG-ELF',
