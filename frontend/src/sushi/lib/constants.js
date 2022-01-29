@@ -40,15 +40,27 @@
 
 export const contractAddresses = {
   sushi: {
-    10000: '0x10F089271f5131784543e8636c7c4F465f1ccC8B', // FOGToken address
+    10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87', // FOGToken address
     // 10001: '0x43a7903E3a839a67192151eE300e11198985E54b', // sushi
-    10001: '0x10F089271f5131784543e8636c7c4F465f1ccC8B', // FOGToken address
+    10001: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87', // FOGToken address
     // 10000: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2', // sushi use
   },
   masterChef: {
-    10000: '0xb26145d9a05942a0Ec08d4DB1C1AFd2D3ad37697', // FOGFarming address
+    10000: '0xCc09C4C02af2F1a9A72fD0be345a96CAb7f2eaEb', // FOGFarming address
     // 10001: '0x245A074cA9814fB46A21562bC70fAB92F8A3F779', // sushi
-    10001: '0xb26145d9a05942a0Ec08d4DB1C1AFd2D3ad37697', // FOGFarming address
+    10001: '0xCc09C4C02af2F1a9A72fD0be345a96CAb7f2eaEb', // FOGFarming address
+    // 10000: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // sushi use
+  },
+  mist: {
+    10000: '0x5fA664f69c2A4A3ec94FaC3cBf7049BD9CA73129', // FOGToken address
+    // 10001: '0x43a7903E3a839a67192151eE300e11198985E54b', // sushi
+    10001: '0x5fA664f69c2A4A3ec94FaC3cBf7049BD9CA73129', // FOGToken address
+    // 10000: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2', // sushi use
+  },
+  mistmasterChef: {
+    10000: '0x3A7B9D0ed49a90712da4E087b17eE4Ac1375a5D4', // FOGFarming address
+    // 10001: '0x245A074cA9814fB46A21562bC70fAB92F8A3F779', // sushi
+    10001: '0x3A7B9D0ed49a90712da4E087b17eE4Ac1375a5D4', // FOGFarming address
     // 10000: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // sushi use
   },
   weth: {
@@ -136,7 +148,7 @@ export const supportedPools = [
     },
     tokenAddresses: {
       10001: '',
-      10000: '0x10F089271f5131784543e8636c7c4F465f1ccC8B',
+      10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87',
     },
     name: 'FOG Party!',
     symbol: 'BCH-FlexUSD',
@@ -152,7 +164,7 @@ export const supportedPools = [
     },
     tokenAddresses: {
       10001: '0xf2c73AF42FbAC096FE8F591899C5fc8bCB13884B',
-      10000: '0x10F089271f5131784543e8636c7c4F465f1ccC8B',
+      10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87',
     },
     name: 'elf love FOG!🧝🍱',
     symbol: 'FOG-ELF',
