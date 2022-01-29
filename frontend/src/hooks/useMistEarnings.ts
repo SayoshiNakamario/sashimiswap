@@ -4,11 +4,11 @@ import { provider } from 'web3-core'
 import BigNumber from 'bignumber.js'
 import { useWallet } from 'use-wallet'
 
-import { getEarned, getMasterChefContract } from '../sushi/utils'
+import { getEarnedMist, getMasterChefContract } from '../sushi/utils'
 import useYam from './useYam'
 import useBlock from './useBlock'
 
-const mistEarnings = (pid: number) => {
+const useMistEarnings = (pid: number) => {
   const [balance, setBalance] = useState(new BigNumber(0))
   const {
     account,
@@ -19,7 +19,7 @@ const mistEarnings = (pid: number) => {
   const block = useBlock()
 
   const fetchBalance = useCallback(async () => {
-    const balance = await getEarned(masterChefContract, pid, account)
+    const balance = await getEarnedMist(masterChefContract, pid, account)
     setBalance(new BigNumber(balance))
   }, [account, masterChefContract, yam])
 
@@ -32,4 +32,4 @@ const mistEarnings = (pid: number) => {
   return balance
 }
 
-export default mistEarnings
+export default useMistEarnings

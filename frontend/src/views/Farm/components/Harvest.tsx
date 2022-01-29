@@ -12,7 +12,7 @@ import Value from '../../../components/Value'
 import FOGIcon from '../../../assets/tokens/helpmexmist.gif'
 
 import useEarnings from '../../../hooks/useEarnings'
-import mistEarnings from '../../../hooks/mistEarnings'
+import useMistEarnings from '../../../hooks/useMistEarnings'
 import useReward from '../../../hooks/useReward'
 
 import {
@@ -21,12 +21,12 @@ import {
 } from '../../../utils/formatBalance'
 
 interface HarvestProps {
-  pid: number
+  pid: number,
 }
 
 const Harvest: React.FC<HarvestProps> = ({ pid }) => {
   const earnings = useEarnings(pid)
-  const mistearnings = mistEarnings(pid)
+  const mistearnings = useMistEarnings(pid)
   const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useReward(pid)
 
@@ -44,7 +44,7 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
           <StyledCardActions>
             <Button
               disabled={!earnings.toNumber() || pendingTx}
-              text={pendingTx ? 'Collecting SASHIMI' : 'Harvest'}
+              text={pendingTx ? 'Collecting FOG' : 'Harvest'}
               onClick={async () => {
                 setPendingTx(true)
                 await onReward()

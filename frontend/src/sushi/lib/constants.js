@@ -51,18 +51,6 @@ export const contractAddresses = {
     10001: '0xCc09C4C02af2F1a9A72fD0be345a96CAb7f2eaEb', // FOGFarming address
     // 10000: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // sushi use
   },
-  mist: {
-    10000: '0x5fA664f69c2A4A3ec94FaC3cBf7049BD9CA73129', // FOGToken address
-    // 10001: '0x43a7903E3a839a67192151eE300e11198985E54b', // sushi
-    10001: '0x5fA664f69c2A4A3ec94FaC3cBf7049BD9CA73129', // FOGToken address
-    // 10000: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2', // sushi use
-  },
-  mistmasterChef: {
-    10000: '0x3A7B9D0ed49a90712da4E087b17eE4Ac1375a5D4', // FOGFarming address
-    // 10001: '0x245A074cA9814fB46A21562bC70fAB92F8A3F779', // sushi
-    10001: '0x3A7B9D0ed49a90712da4E087b17eE4Ac1375a5D4', // FOGFarming address
-    // 10000: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // sushi use
-  },
   weth: {
     10000: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04', // WBCH - formerly aelf sushi
     // 10001: '0xd0a1e359811322d97991e03f863a0c30c2cf029c', // weth in kovan
@@ -142,6 +130,7 @@ export const supportedPools = [
   // },
   {
     pid: 0,
+    mpid: 1,
     lpAddresses: {
       10001: '',
       10000: '0x24f011f12Ea45AfaDb1D4245bA15dCAB38B43D13',
@@ -158,6 +147,7 @@ export const supportedPools = [
   },
   {
     pid: 10,
+    mpid: 0,
     lpAddresses: {
       10001: '0xb21f5d46e1756cfeb34496636d38f97dc8552415',
       10000: '0x1629B0259E6E5c315B8Eea09fd1a4D0A26291F98',
@@ -174,6 +164,7 @@ export const supportedPools = [
   },
   {
     pid: 7,
+    mpid: 0,
     lpAddresses: {
       10001: '0xb21f5d46e1756cfeb34496636d38f97dc8552415',
       10000: '0xA6be7F7C6c454B364cDA446ea39Be9e5E4369DE8',
@@ -190,6 +181,7 @@ export const supportedPools = [
   },
   {
     pid: 8,
+    mpid: 0,
     lpAddresses: {
       10001: '0xb21f5d46e1756cfeb34496636d38f97dc8552415',
       10000: '0xBb2b8038a1640196FbE3e38816F3e67Cba72D940',
@@ -208,6 +200,7 @@ export const supportedPools = [
   // Others
   {
     pid: 1,
+    mpid: 0,
     lpAddresses: {
       10001: '0xb21f5d46e1756cfeb34496636d38f97dc8552415',
       10000: '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc',
@@ -224,6 +217,7 @@ export const supportedPools = [
   },
   {
     pid: 2,
+    mpid: 0,
     lpAddresses: {
       10001: '0xb21f5d46e1756cfeb34496636d38f97dc8552415',
       10000: '0xa478c2975ab1ea89e8196811f51a7b7ade33eb11',
@@ -240,6 +234,7 @@ export const supportedPools = [
   },
   {
     pid: 3,
+    mpid: 0,
     lpAddresses: {
       10001: '0xb21f5d46e1756cfeb34496636d38f97dc8552415',
       10000: '0x2fdbadf3c4d5a8666bc06645b8358ab803996e28',
@@ -256,6 +251,7 @@ export const supportedPools = [
   },
   {
     pid: 4,
+    mpid: 0,
     lpAddresses: {
       10001: '0xb21f5d46e1756cfeb34496636d38f97dc8552415',
       10000: '0xab3f9bf1d81ddb224a2014e98b238638824bcf20',
@@ -272,6 +268,7 @@ export const supportedPools = [
   },
   {
     pid: 5,
+    mpid: 0,
     lpAddresses: {
       10001: '0xb21f5d46e1756cfeb34496636d38f97dc8552415',
       10000: '0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974',
@@ -288,6 +285,7 @@ export const supportedPools = [
   },
   {
     pid: 6,
+    mpid: 0,
     lpAddresses: {
       10001: '0xb21f5d46e1756cfeb34496636d38f97dc8552415',
       10000: '0x43ae24960e5534731fc831386c07755a2dc33d47',

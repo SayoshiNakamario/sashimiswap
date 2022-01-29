@@ -22,6 +22,12 @@ export const getMasterChefAddress = (sushi) => {
 export const getSushiAddress = (sushi) => {
   return sushi && sushi.sushiAddress
 }
+export const getMistMasterChefAddress = (sushi) => {
+  return sushi && sushi.mistmasterChefAddress
+}
+export const getMistAddress = (sushi) => {
+  return sushi && sushi.mistAddress
+}
 export const getWethContract = (sushi) => {
   return sushi && sushi.contracts && sushi.contracts.weth
 }
@@ -81,6 +87,9 @@ export const getPoolWeight = async (masterChefContract, pid) => {
 
 export const getEarned = async (masterChefContract, pid, account) => {
   return masterChefContract.methods.pendingFOG(pid, account).call()
+}
+export const getEarnedMist = async (masterChefContract, pid, account) => {
+  return masterChefContract.methods.pendingMist(pid, account).call()
 }
 
 export const getTotalLPWethValue = async (
