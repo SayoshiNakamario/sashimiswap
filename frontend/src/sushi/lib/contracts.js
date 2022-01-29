@@ -11,8 +11,6 @@ import UNIV2PairAbi from './abi/uni_v2_lp.json'
 
 import SushiAbi from './abi/sushi.json'
 import MasterChefAbi from './abi/masterchef.json'
-import MistAbi from './abi/mist.json'
-import MistMasterChefAbi from './abi/mistmasterchef.json'
 import ERC20Abi from './abi/erc20.json'
 import WETHAbi from './abi/weth.json'
 
@@ -28,8 +26,6 @@ export class Contracts {
 
     this.sushi = new this.web3.eth.Contract(SushiAbi)
     this.masterChef = new this.web3.eth.Contract(MasterChefAbi)
-    this.mist = new this.web3.eth.Contract(MistAbi)
-    this.mistmasterChef = new this.web3.eth.Contract(MistMasterChefAbi)
     this.weth = new this.web3.eth.Contract(WETHAbi)
 
     this.pools = supportedPools.map((pool) =>
@@ -54,8 +50,6 @@ export class Contracts {
 
     setProvider(this.sushi, contractAddresses.sushi[networkId])
     setProvider(this.masterChef, contractAddresses.masterChef[networkId])
-    setProvider(this.mist, contractAddresses.mist[networkId])
-    setProvider(this.mistmasterChef, contractAddresses.mistmasterChef[networkId])
     setProvider(this.weth, contractAddresses.weth[networkId])
 
     this.pools.forEach(
