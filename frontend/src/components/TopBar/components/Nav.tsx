@@ -8,8 +8,11 @@ const Nav: React.FC = () => {
       <StyledLink exact activeClassName="active" to="/">
         Home
       </StyledLink>
+      <StyledLink exact activeClassName="active" to="/stake">
+        Stake
+      </StyledLink>
       <StyledLink exact activeClassName="active" to="/farms">
-        Menu
+        Farm
       </StyledLink>
       {/*<StyledAbsoluteLink*/}
       {/*  href="https://medium.com/sushiswap/the-sushiswap-project-c4049ea9941e"*/}
@@ -18,6 +21,7 @@ const Nav: React.FC = () => {
       {/*  About*/}
       {/*</StyledAbsoluteLink>*/}
     </StyledNav>
+    
   )
 }
 
