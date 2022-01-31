@@ -8,9 +8,10 @@ const theme = {
   color: {
     black,
     grey,
+    green,
     primary: {
-      light: red[200],
-      main: red[500],
+      light: grey[100],
+      main: grey[500],
     },
     secondary: {
       main: green[500],
@@ -27,7 +28,7 @@ const theme = {
     6: 48,
     7: 64,
   },
-  topBarSize: 72
+  topBarSize: 60
 }
 
 export default theme

@@ -102,7 +102,7 @@ const Balances: React.FC = () => {
               <YamIcon />
               <Spacer />
               <div style={{ flex: 1 }}>
-                <Label text="Your SASHIMI Balance" />
+                <Label text="Your FOG Balance" />
                 <Value
                   value={!!account ? getBalanceNumber(sushiBalance) : 'Locked'}
                 />
@@ -113,7 +113,7 @@ const Balances: React.FC = () => {
         <Footnote>
           Pending harvest
           <FootnoteValue>
-            <PendingRewards /> SASHIMI
+            <PendingRewards /> FOG
           </FootnoteValue>
         </Footnote>
       </Card>
@@ -121,7 +121,7 @@ const Balances: React.FC = () => {
 
       <Card>
         <CardContent>
-          <Label text="Total SASHIMI Supply" />
+          <Label text="Total FOG Supply" />
           <Value
             value={totalSupply ? getBalanceNumber(totalSupply) : 'Locked'}
           />
@@ -129,7 +129,7 @@ const Balances: React.FC = () => {
         <Footnote>
           New rewards per block
           {/*<FootnoteValue>1,000 SUSHI</FootnoteValue>*/}
-          <FootnoteValue>1,000 SASHIMI</FootnoteValue>
+          <FootnoteValue>100 FOG</FootnoteValue>
         </Footnote>
       </Card>
     </StyledWrapper>
