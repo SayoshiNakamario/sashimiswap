@@ -32,17 +32,17 @@ const Nav: React.FC = () => {
       {/*>*/}
       {/*  Uniswap SASHIMI-ETH*/}
       {/*</StyledLink>*/}
-      <StyledLink target="_blank" href="https://discord.gg/zTdmUkb">
-        Discord
+      <StyledLink target="_blank" href="https://app.mistswap.fi/swap">
+        Liquidity
       </StyledLink>
-        <StyledLink target="_blank" href="https://t.me/joinchat/KABj-Bz6CVzyi23HK2rjzA">
+        <StyledLink target="_blank" href="https://www.google.com">
         Telegram
       </StyledLink>
       {/*<StyledLink target="_blank" href="https://github.com/sushiswap">*/}
       {/*<StyledLink target="_blank" href={GITHUB}>*/}
       {/*  Github*/}
       {/*</StyledLink>*/}
-      {/*<StyledLink target="_blank" href="https://twitter.com/sushiswap">*/}
+      {/*<StyledLink target="_blank" href="https://twitter.com/">*/}
       {/*  Twitter*/}
       {/*</StyledLink>*/}
     </StyledNav>
