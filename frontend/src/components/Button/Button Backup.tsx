@@ -29,12 +29,11 @@ const Button: React.FC<ButtonProps> = ({
   let buttonColor: string
   switch (variant) {
     case 'secondary':
-      buttonColor = color.grey[400]
+      buttonColor = color.grey[800]
       break
     case 'default':
     default:
-      buttonColor = color.grey[400]
-      // buttonColor = color.primary.main
+      buttonColor = color.primary.main
   }
 
   let boxShadow: string
@@ -43,20 +42,23 @@ const Button: React.FC<ButtonProps> = ({
   let fontSize: number
   switch (size) {
     case 'sm':
-      boxShadow = `4px 4px 8px ${color.grey[300]}`
+      boxShadow = `4px 4px 8px ${color.grey[300]},
+        -8px -8px 16px ${color.grey[100]}FF;`
       buttonPadding = spacing[3]
       buttonSize = 36
       fontSize = 14
       break
     case 'lg':
-      boxShadow = `5px 5px 7px ${color.grey[300]}`
+      boxShadow = `6px 6px 12px ${color.grey[300]},
+        -12px -12px 24px ${color.grey[100]}ff;`
       buttonPadding = spacing[4]
       buttonSize = 72
       fontSize = 16
       break
     case 'md':
     default:
-      boxShadow = `5px 5px 7px ${color.green[300]}`
+      boxShadow = `6px 6px 12px ${color.grey[700]},
+        -12px -12px 24px -2px ${color.grey[100]}ff;`
       buttonPadding = spacing[4]
       buttonSize = 56
       fontSize = 16
@@ -99,14 +101,13 @@ interface StyledButtonProps {
 
 const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
-  background-color: ${props => props.theme.color.grey[700]};
+  background-color: ${props => props.theme.color.grey[200]};
   border: 0;
   border-radius: 12px;
   box-shadow: ${props => props.boxShadow};
   color: ${props => !props.disabled ? props.color : `${props.color}55`};
   cursor: pointer;
   display: flex;
-  opacity: 0.6;
   font-size: ${props => props.fontSize}px;
   font-weight: 700;
   height: ${props => props.size}px;
@@ -117,7 +118,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   pointer-events: ${props => !props.disabled ? undefined : 'none'};
   width: 100%;
   &:hover {
-    background-color: ${props => props.theme.color.green[300]};
+    background-color: ${props => props.theme.color.grey[100]};
   }
 `
 
