@@ -51,15 +51,15 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
             <StyledBalance>
               <Value value={getBalanceNumber(sushiBalance)} />
               {/*<Label text="SUSHI Balance" />*/}
-              <Label text="SASHIMI Balance" />
+              <Label text="FOG Balance" />
             </StyledBalance>
           </StyledBalanceWrapper>
         </div>
 
         <Spacer />
         <Button
-          href={`https://${ethscanType}etherscan.io/address/${account}`}
-          text="View on Etherscan"
+          href={`https://${ethscanType}smartscan.cash/address/${account}`}
+          text="View on Smartscan.cash"
           variant="secondary"
         />
         <Spacer />

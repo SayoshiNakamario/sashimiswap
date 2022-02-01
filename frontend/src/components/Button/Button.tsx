@@ -29,11 +29,11 @@ const Button: React.FC<ButtonProps> = ({
   let buttonColor: string
   switch (variant) {
     case 'secondary':
-      buttonColor = color.grey[400]
+      buttonColor = color.white
       break
     case 'default':
     default:
-      buttonColor = color.grey[400]
+      buttonColor = color.grey[600]
       // buttonColor = color.primary.main
   }
 
@@ -43,13 +43,13 @@ const Button: React.FC<ButtonProps> = ({
   let fontSize: number
   switch (size) {
     case 'sm':
-      boxShadow = `4px 4px 8px ${color.grey[300]}`
+      boxShadow = `4px 4px 8px ${color.green[300]}`
       buttonPadding = spacing[3]
       buttonSize = 36
       fontSize = 14
       break
     case 'lg':
-      boxShadow = `5px 5px 7px ${color.grey[300]}`
+      boxShadow = `5px 5px 7px ${color.green[300]}`
       buttonPadding = spacing[4]
       buttonSize = 72
       fontSize = 16
@@ -96,17 +96,18 @@ interface StyledButtonProps {
   padding: number,
   size: number
 }
-
+ 
 const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
-  background-color: ${props => props.theme.color.grey[700]};
-  border: 0;
-  border-radius: 12px;
+  background-color: ${props => props.theme.color.grey[900]};
+  border: 1;
+  border-color: ${props => props.theme.color.green[100]};
+  border-radius: 4px;
   box-shadow: ${props => props.boxShadow};
-  color: ${props => !props.disabled ? props.color : `${props.color}55`};
+  color: ${props => !props.disabled ? props.color : `${props.color}`};
   cursor: pointer;
   display: flex;
-  opacity: 0.6;
+  opacity: 1;
   font-size: ${props => props.fontSize}px;
   font-weight: 700;
   height: ${props => props.size}px;

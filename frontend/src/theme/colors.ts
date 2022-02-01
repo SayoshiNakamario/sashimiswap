@@ -21,6 +21,7 @@ export const grey = {
   400: '#ffffff', // Labels + ?
   500: '#805e49',
   600: '#ffffff', // Other Labels + ?
-  700: '#000000', // Card Background
+  700: '#131515', // Card Background
   800: '#2d1e12',
+  900: 'rgba(7.5, 8.2, 8.2, 0.3)',
 }
