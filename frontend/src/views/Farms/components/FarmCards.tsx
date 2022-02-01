@@ -153,6 +153,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
       <Card>
         <CardContent>
           <StyledContent>
+          <CardIcon>{<img src={"https://raw.githubusercontent.com/SayoshiNakamario/sashimiswap/master/frontend/src/assets/tokens/bch-square.jpg"} height={60} />}</CardIcon>
             <CardIcon>{farm.icon}</CardIcon>
             <StyledTitle>{farm.name}</StyledTitle>
             <StyledDetails>

@@ -108,6 +108,7 @@ MIST LP Address on mainnet for reference
 44	SIDX/BCH	    0x7E1B9F1e286160A80ab9B04D228C02583AeF90B5
 45	GOC/BCH	      0x4fd950b3cA45d6F40E5187706D3981ee955E06b4
 */
+//{../../../assets/tokens/{token1}' + '.jpg'}
 
 export const supportedPools = [
   // Test Only
@@ -135,13 +136,15 @@ export const supportedPools = [
       10000: '0x24f011f12Ea45AfaDb1D4245bA15dCAB38B43D13',
     },
     tokenAddresses: {
-      10001: '',
+      10001: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
       10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87',
     },
-    name: 'FOG Party!',
+    name: 'BCH-FlexUSD',
     symbol: 'BCH-FlexUSD',
     tokenSymbol: 'FOG',
-    icon: '🍣',
+    // token1: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
+    // token2: '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72',
+    icon: '',
     pool: 'X%',
   },
   {
