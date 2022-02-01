@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom'
 const Nav: React.FC = () => {
   return (
     <StyledNav>
-      <StyledLink exact activeClassName="active" to="/">
-        Home
+      <StyledLink target="_blank" to={{ pathname: "https://app.mistswap.fi/pool" }}>
+        Get Liquidity
       </StyledLink>
       <StyledLink exact activeClassName="active" to="/stake">
         Stake
