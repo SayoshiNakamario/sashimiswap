@@ -1,5 +1,7 @@
+import { stderr } from 'process'
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
+import { sortAndDeduplicateDiagnostics } from 'typescript'
 
 import { useWallet } from 'use-wallet'
 
@@ -29,13 +31,13 @@ const AccountButton: React.FC<AccountButtonProps> = (props) => {
         <Button
           onClick={handleUnlockClick}
           size="sm"
-          text="Unlock Wallet"
+          text="Connect Wallet"
         />
       ) : (
         <Button
           onClick={onPresentAccountModal}
           size="sm"
-          text="My Wallet"
+          text={account.slice(0 , 4) + '....' + account.slice(38)}
         />
       )}
     </StyledAccountButton>

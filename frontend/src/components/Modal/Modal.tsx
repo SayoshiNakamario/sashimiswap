@@ -23,7 +23,7 @@ const mobileKeyframes = keyframes`
 `
 
 const StyledResponsiveWrapper = styled.div`
-  align-items: center;
+align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -43,10 +43,10 @@ const StyledResponsiveWrapper = styled.div`
 
 const StyledModal = styled.div`
   padding: 0 20px;
-  background: ${(props) => props.theme.color.grey[200]};
-  border: 1px solid ${(props) => props.theme.color.grey[300]}ff;
+  background: ${(props) => props.theme.color.grey[700]};
+  border: 1px solid ${(props) => props.theme.color.green[100]}ff;
   border-radius: 12px;
-  box-shadow: inset 1px 1px 0px ${(props) => props.theme.color.grey[100]};
+  box-shadow: 5px 5px 7px ${(props) => props.theme.color.green[200]};
   display: flex;
   flex-direction: column;
   position: relative;
