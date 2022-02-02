@@ -86,7 +86,7 @@ const FarmCards: React.FC = () => {
         ))
       ) : (
         <StyledLoadingWrapper>
-          <Loader text="Cooking the rice ..." />
+          <Loader text="Water condensing ..." />
         </StyledLoadingWrapper>
       )}
     </StyledCards>
@@ -104,6 +104,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   const { account } = useWallet()
   const { lpTokenAddress } = farm
   const yam = useYam()
+
+  const farmicon = "https://raw.githubusercontent.com/SayoshiNakamario/assets/master/blockchains/smartbch/assets/" + farm.icon + "/logo.png";
+  const farmicon2 = "https://raw.githubusercontent.com/SayoshiNakamario/assets/master/blockchains/smartbch/assets/" + farm.icon2 + "/logo.png";
 
   const renderer = (countdownProps: CountdownRenderProps) => {
     const { hours, minutes, seconds } = countdownProps
@@ -153,8 +156,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
       <Card>
         <CardContent>
           <StyledContent>
-          <CardIcon>{<img src={"https://raw.githubusercontent.com/SayoshiNakamario/sashimiswap/master/frontend/src/assets/tokens/bch-square.jpg"} height={60} />}</CardIcon>
-            <CardIcon>{farm.icon}</CardIcon>
+          <CardIcon><img src={farmicon} height="75" style={{border: "0", borderRadius: "40px"}}></img><img src={farmicon2} height="75" style={{border: "0", borderRadius: "40px"}}></img></CardIcon>
             <StyledTitle>{farm.name}</StyledTitle>
             <StyledDetails>
               <StyledDetail>Deposit {farm.lpToken.toUpperCase()}</StyledDetail>
@@ -294,7 +296,7 @@ const StyledDetails = styled.div`
 `
 
 const StyledDetail = styled.div`
-  color: ${(props) => props.theme.color.grey[500]};
+  color: ${(props) => props.theme.color.grey[400]};
 `
 
 const StyledInsight = styled.div`

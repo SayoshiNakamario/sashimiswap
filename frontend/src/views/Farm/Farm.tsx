@@ -28,6 +28,7 @@ const Farm: React.FC = () => {
     earnToken,
     name,
     icon,
+    icon2,
   } = useFarm(farmId) || {
     pid: 0,
     lpToken: '',
@@ -36,6 +37,7 @@ const Farm: React.FC = () => {
     earnToken: '',
     name: '',
     icon: '',
+    icon2: '',
   }
 
   useEffect(() => {
