@@ -2,12 +2,11 @@ import React from 'react'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import { useWallet } from 'use-wallet'
 
-import chef from '../../assets/img/chef.png'
-
 import Button from '../../components/Button'
 import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
 import WalletProviderModal from '../../components/WalletProviderModal'
+import Spacer from '../../components/Spacer'
 
 import useModal from '../../hooks/useModal'
 
@@ -25,11 +24,7 @@ const Farms: React.FC = () => {
         {!!account ? (
           <>
             <Route exact path={path}>
-              <PageHeader
-                icon={<img src={chef} height="120" />}
-                subtitle="Earn FOG by staking Mistswap LP Tokens."
-                title="Select Your Farms"
-              />
+              <Spacer size={'xlg'} />
               <FarmCards />
             </Route>
             <Route path={`${path}/:farmId`}>

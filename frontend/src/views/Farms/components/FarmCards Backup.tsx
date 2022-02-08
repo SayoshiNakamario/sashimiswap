@@ -1,15 +1,21 @@
-import React, { useMemo, useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import Countdown, { CountdownRenderProps } from 'react-countdown'
 import { useWallet } from 'use-wallet'
 import numeral from 'numeral'
 
+import { Contract } from 'web3-eth-contract'
+
 import Button from '../../../components/Button'
 import Card from '../../../components/Card'
 import CardContent from '../../../components/CardContent'
 import CardIcon from '../../../components/CardIcon'
+import { AddIcon, RemoveIcon } from '../../../components/icons'
+import IconButton from '../../../components/IconButton'
 import Loader from '../../../components/Loader'
 import Spacer from '../../../components/Spacer'
+import Label from '../../../components/Label'
+import Value from '../../../components/Value'
 
 import useFarms from '../../../hooks/useFarms'
 import useYam from '../../../hooks/useYam'
@@ -25,7 +31,14 @@ import useAllStakedValue, {
 
 import {BASIC_TOKEN} from '../../../constants/config';
 
-
+import useMistEarnings from '../../../hooks/useMistEarnings'
+import useReward from '../../../hooks/useReward'
+import useEarnings from '../../../hooks/useEarnings'
+import {
+  getDisplayBalance,
+  getBalanceNumber,
+} from '../../../utils/formatBalance'
+import { pid } from 'process'
 
 interface FarmWithStakedValue extends Farm, StakedValue {
   apy: BigNumber
@@ -45,8 +58,9 @@ const FarmCards: React.FC = () => {
       ? stakedValue[sushiIndex].tokenPriceInWeth
       : new BigNumber(0)
 
-  const BLOCKS_PER_YEAR = new BigNumber(5256000)
-  const SASHIMI_PER_BLOCK = new BigNumber(100)
+  const BLOCKS_PER_YEAR = new BigNumber(2336000)
+  // TODO: After block height xxxx, SUSHI_PER_BLOCK = 100;
+  const SASHIMI_PER_BLOCK = new BigNumber(1000)
 
   const rows = farms.reduce<FarmWithStakedValue[][]>(
     (farmRows, farm, i) => {
@@ -105,7 +119,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   const { account } = useWallet()
   const { lpTokenAddress } = farm
   const yam = useYam()
-  const { ethereum } = useWallet()
 
   const farmicon = "https://raw.githubusercontent.com/SayoshiNakamario/assets/master/blockchains/smartbch/assets/" + farm.icon + "/logo.png";
   const farmicon2 = "https://raw.githubusercontent.com/SayoshiNakamario/assets/master/blockchains/smartbch/assets/" + farm.icon2 + "/logo.png";
@@ -122,7 +135,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
     )
   }
 
-  
   useEffect(() => {
     async function fetchEarned() {
       if (yam) return
@@ -131,17 +143,15 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
         lpTokenAddress,
         account,
       )
-     setHarvestable(bnToDec(earned))
+      setHarvestable(bnToDec(earned))
     }
     if (yam && account) {
       fetchEarned()
     }
   }, [yam, lpTokenAddress, account, setHarvestable])
 
-
   const poolActive = true // startTime * 1000 - Date.now() <= 0
 
-//Farm APY %
   let farmApy:any;
   if (farm.apy && farm.apy.isNaN()) {
     farmApy = '- %';
@@ -154,13 +164,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             .slice(0, -1) || '-' }%`
         : 'Loading...';
   }
-//End farm APY %
 
 {/* const earnings = useEarnings(pid)
     const mistearnings = useMistEarnings(pid)
     const [pendingTx, setPendingTx] = useState(false)
     const { onReward } = useReward(pid) */}
-    
+  
   return (
     <StyledCardWrapper>
       {farm.tokenSymbol === 'FOG' && <StyledCardAccent />}
@@ -176,8 +185,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               <StyledDetail>FOG: {/* {getBalanceNumber(earnings)} */}</StyledDetail>
               <StyledDetail>MIST: {/* {getBalanceNumber(mistearnings)} */}</StyledDetail>
             </StyledDetails>
-              
-             
               <Button
               disabled={!poolActive}
               text={poolActive ? 'Deposit' : undefined}
@@ -190,6 +197,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                 />
               )}
             </Button>
+
 
               {/* <span>
                 {farm.tokenAmount

@@ -22,6 +22,8 @@ import Spacer from '../../Spacer'
 import Value from '../../Value'
 import {getEthChainInfo} from "../../../utils/getEthChainInfo";
 
+import logo from '../../../assets/img/logo.png'
+
 const {
   ethscanType
 } = getEthChainInfo();
@@ -39,19 +41,21 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
 
   return (
     <Modal>
-      <ModalTitle text="My Account" />
+      <ModalTitle text="Your Account" />
+      <StyledBalance>{account}</StyledBalance>
       <ModalContent>
-        <Spacer />
+      
+
 
         <div style={{ display: 'flex' }}>
           <StyledBalanceWrapper>
             <CardIcon>
-              <span>🍣</span>
+              <img src={logo} height="120"></img>
             </CardIcon>
             <StyledBalance>
               <Value value={getBalanceNumber(sushiBalance)} />
               {/*<Label text="SUSHI Balance" />*/}
-              <Label text="FOG Balance" />
+              <Label text="FOG Balance"/>
             </StyledBalance>
           </StyledBalanceWrapper>
         </div>
@@ -80,6 +84,7 @@ const StyledBalance = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 `
 
 const StyledBalanceWrapper = styled.div`
@@ -87,7 +92,8 @@ const StyledBalanceWrapper = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  margin-bottom: ${(props) => props.theme.spacing[4]}px;
+  margin-bottom: ${(props) => props.theme.spacing[8]}px;
+  margin-top: ${(props) => props.theme.spacing[8]}px;
 `
 
 export default AccountModal

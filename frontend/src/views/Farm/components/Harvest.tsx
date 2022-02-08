@@ -9,7 +9,8 @@ import CardContent from '../../../components/CardContent'
 import CardIcon from '../../../components/CardIcon'
 import Label from '../../../components/Label'
 import Value from '../../../components/Value'
-import FOGIcon from '../../../assets/tokens/helpmexmist.gif'
+import FOGIcon from '../../../assets/img/logo.png'
+import MISTIcon from '../../../assets/img/mist.png'
 
 import useEarnings from '../../../hooks/useEarnings'
 import useMistEarnings from '../../../hooks/useMistEarnings'
@@ -35,11 +36,10 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
       <CardContent>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon><img src={FOGIcon}/></CardIcon>
-            <Value value={getBalanceNumber(earnings)} />
             <Label text="FOG Earned" />
-            <Value value={getBalanceNumber(mistearnings)} />
+            <CardIcon><img src={FOGIcon} height="60"/><Value value={getBalanceNumber(earnings)} /></CardIcon>
             <Label text="MIST Earned" />
+            <CardIcon><img src={MISTIcon} height="50"/><Value value={getBalanceNumber(mistearnings)} /></CardIcon>          
           </StyledCardHeader>
           <StyledCardActions>
             <Button

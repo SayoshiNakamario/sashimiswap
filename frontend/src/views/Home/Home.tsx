@@ -14,11 +14,7 @@ import Balances from './components/Balances'
 const Home: React.FC = () => {
   return (
     <Page>
-      <PageHeader
-        icon={<img src={chef} height={120} />}
-        title="FOGFarming is Ready"
-        subtitle="Stake Mistswap LP tokens to earn MIST and FOG!"
-      />
+      <Spacer size="xlg"></Spacer>
 
       <Container>
         <Balances />

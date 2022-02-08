@@ -21,6 +21,10 @@ import useStakedBalance from '../../../hooks/useStakedBalance'
 import useTokenBalance from '../../../hooks/useTokenBalance'
 import useUnstake from '../../../hooks/useUnstake'
 
+import useEarnings from '../../../hooks/useEarnings'
+import useMistEarnings from '../../../hooks/useMistEarnings'
+import useReward from '../../../hooks/useReward'
+
 import { getBalanceNumber } from '../../../utils/formatBalance'
 
 import DepositModal from './DepositModal'
@@ -73,16 +77,49 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
     }
   }, [onApprove, setRequestedApproval])
 
+  // Approve-Deposit-Harvest Button
+
+  const earnings = useEarnings(pid)
+  const mistearnings = useMistEarnings(pid)
+  const [pendingTx, setPendingTx] = useState(false)
+  const { onReward } = useReward(pid)
+
+ let dynamicButton = null;
+
+ {/*
+  if (!allowance.toNumber()) {
+    dynamicButton = 
+      <Button
+        disabled={requestedApproval}
+        onClick={handleApprove}
+        text={`Approve ${tokenName}`} />;
+  } else if (stakedBalance.eq(new BigNumber(0))) {
+    dynamicButton = 
+      <Button
+        text="Deposit"
+        onClick={onPresentDeposit} />;
+  } else {
+    dynamicButton = 
+      <Button
+        disabled={!earnings.toNumber() || pendingTx}
+        text={pendingTx ? 'Collecting FOG' : 'Harvest'}
+        onClick={async () => {
+        setPendingTx(true)
+        await onReward()
+        setPendingTx(false) }
+          } />;
+  }
+*/}
+
+
+
   return (
-    <Card>
-      <CardContent>
+<Card>
+    <CardContent>
         <StyledCardContentInner>
-          <StyledCardHeader>
-            <CardIcon>👨🏻‍🍳</CardIcon>
-            <Value value={getBalanceNumber(stakedBalance)} />
             <Label text={`${tokenName} Tokens Staked`} />
-          </StyledCardHeader>
-          <StyledCardActions>
+            <Value value={getBalanceNumber(stakedBalance)} />
+          <StyledCardActions>            
             {!allowance.toNumber() ? (
               <Button
                 disabled={requestedApproval}
@@ -91,24 +128,45 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
               />
             ) : (
               <>
-                <Button
-                  disabled={stakedBalance.eq(new BigNumber(0))}
-                  text="Unstake"
-                  onClick={onPresentWithdraw}
-                />
+                {stakedBalance.eq(new BigNumber(0)) ? (
+                  <Button
+                  text="Deposit"
+                  onClick={onPresentDeposit}
+                  />
+                  ) : (
+                  <Button
+                  text="Harvest"
+                  onClick={onPresentDeposit}
+                  />
+                )}
                 <StyledActionSpacer />
-                <IconButton onClick={onPresentDeposit}>
-                  <AddIcon />
-                </IconButton>
+                {stakedBalance.eq(new BigNumber(0)) ? (
+                  <Button
+                    text="Remove"
+                    disabled={true}
+                  />
+                  ) : (
+                    <Button
+                    text="Remove"
+                    onClick={onPresentWithdraw}
+                    />
+                  )
+                }
               </>
-            )}
+            )} 
+            
           </StyledCardActions>
         </StyledCardContentInner>
-      </CardContent>
+    </CardContent>
     </Card>
   )
 }
 
+const Testthing = styled.div`
+align-items: center;
+display: flex;
+flex-direction: column;
+`
 const StyledCardHeader = styled.div`
   align-items: center;
   display: flex;

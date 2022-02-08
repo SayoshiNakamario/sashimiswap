@@ -26,16 +26,15 @@ interface StyledButtonProps {
 
 const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
-  background-color: ${props => props.theme.color.grey[200]};
-  border: 0;
-  border-radius: 28px;
-  box-shadow: 6px 6px 12px ${props => props.theme.color.grey[300]},
-    -12px -12px 24px ${props => props.theme.color.grey[100]}aa;
+  background-color: ${props => props.theme.color.grey[900]};
+  border: 2px solid ${props => props.theme.color.green[100]}ff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 7px ${props => props.theme.color.green[200]};
   color: ${props => !props.disabled ? props.theme.color.primary.main : props.theme.color.grey[400]};
   cursor: pointer;
   display: flex;
   font-weight: 700;
-  height: 56px;
+  height: 45px;
   justify-content: center;
   letter-spacing: 1px;
   outline: none;
@@ -45,7 +44,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   text-transform: uppercase;
   width: 56px;
   &:hover {
-    background-color: ${props => props.theme.color.grey[100]};
+    background-color: ${props => props.theme.color.green[300]};
   }
 `
 

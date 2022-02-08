@@ -61,13 +61,12 @@ const Farm: React.FC = () => {
     return earnToken.toUpperCase()
   }, [earnToken])
 
+
+
   return (
+
     <>
-      <PageHeader
-        icon={icon}
-        subtitle={`Deposit ${lpTokenName}  Tokens and earn ${earnTokenName}`}
-        title={name}
-      />
+    <Spacer size="xlg"/>
       <StyledFarm>
         <StyledCardsWrapper>
           <StyledCardWrapper>
@@ -84,8 +83,8 @@ const Farm: React.FC = () => {
         </StyledCardsWrapper>
         <Spacer size="lg" />
         <StyledInfo>
-          ⭐️ When you stake and unstake LP tokens the contract will
-          automagically harvest pending rewards!
+          ⭐️ When you Deposit and Remove LP tokens the contract will
+          automatically harvest rewards to your wallet.
         </StyledInfo>
         <Spacer size="lg" />
       </StyledFarm>

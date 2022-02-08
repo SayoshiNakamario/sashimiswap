@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 
 interface SpacerProps {
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xlg'
 }
 
 const Spacer: React.FC<SpacerProps> = ({ size = 'md' }) => {
@@ -12,6 +12,9 @@ const Spacer: React.FC<SpacerProps> = ({ size = 'md' }) => {
   switch (size) {
     case 'lg':
       s = spacing[6]
+      break
+    case 'xlg':
+      s = spacing[9]
       break
     case 'sm':
       s = spacing[2]

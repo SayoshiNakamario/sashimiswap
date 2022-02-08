@@ -12,6 +12,7 @@ interface ButtonProps {
   text?: string,
   to?: string,
   variant?: 'default' | 'secondary' | 'tertiary'
+  stage?: 'default' | 'deposit' | 'harvest'
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -23,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
   text,
   to,
   variant,
+  stage,
 }) => {
   const { color, spacing } = useContext(ThemeContext)
 
@@ -58,7 +60,7 @@ const Button: React.FC<ButtonProps> = ({
     default:
       boxShadow = `5px 5px 7px ${color.green[300]}`
       buttonPadding = spacing[4]
-      buttonSize = 56
+      buttonSize = 45
       fontSize = 16
   }
 
