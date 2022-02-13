@@ -128,17 +128,10 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
               />
             ) : (
               <>
-                {stakedBalance.eq(new BigNumber(0)) ? (
                   <Button
                   text="Deposit"
                   onClick={onPresentDeposit}
                   />
-                  ) : (
-                  <Button
-                  text="Harvest"
-                  onClick={onPresentDeposit}
-                  />
-                )}
                 <StyledActionSpacer />
                 {stakedBalance.eq(new BigNumber(0)) ? (
                   <Button

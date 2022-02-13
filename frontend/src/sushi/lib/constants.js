@@ -42,19 +42,19 @@ export const contractAddresses = {
   sushi: {
     10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87', // FOGToken address
     // 10001: '0x43a7903E3a839a67192151eE300e11198985E54b', // sushi
-    10001: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87', // FOGToken address
+    10001: '', // FOGToken address
     // 10000: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2', // sushi use
   },
   masterChef: {
     10000: '0xCc09C4C02af2F1a9A72fD0be345a96CAb7f2eaEb', // FOGFarming address
     // 10001: '0x245A074cA9814fB46A21562bC70fAB92F8A3F779', // sushi
-    10001: '0xCc09C4C02af2F1a9A72fD0be345a96CAb7f2eaEb', // FOGFarming address
+    // 10001: '', // FOGFarming address
     // 10000: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // sushi use
   },
   weth: {
     10000: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04', // WBCH - formerly aelf sushi
     // 10001: '0xd0a1e359811322d97991e03f863a0c30c2cf029c', // weth in kovan
-    10001: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04', // WBCH - formerly sushi use
+    // 10001: '', // WBCH - formerly sushi use
   },
 }
 
@@ -132,11 +132,11 @@ export const supportedPools = [
   {
     pid: 0,
     lpAddresses: {
-      10001: '',
+    //  10001: '',
       10000: '0x24f011f12Ea45AfaDb1D4245bA15dCAB38B43D13',
     },
     tokenAddresses: {
-      10001: '',
+    //  10001: '',
       10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87',
     },
     name: 'BCH-flexUSD',
@@ -148,75 +148,9 @@ export const supportedPools = [
     icon2: '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72',
     pool: 'X%',
   },
-  {
-    pid: 10,
-    lpAddresses: {
-      10001: '',
-      10000: '0x24f011f12Ea45AfaDb1D4245bA15dCAB38B43D13',
-    },
-    tokenAddresses: {
-      10001: '',
-      10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87',
-    },
-    name: 'BCH-MIST',
-    symbol: 'BCH-MIST',
-    tokenSymbol: 'FOG',
-    icon: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
-    icon2: '0x5fA664f69c2A4A3ec94FaC3cBf7049BD9CA73129',
-    pool: '17.7%',
-  },
-  {
-    pid: 7,
-    lpAddresses: {
-      10001: '',
-      10000: '0x24f011f12Ea45AfaDb1D4245bA15dCAB38B43D13',
-    },
-    tokenAddresses: {
-      10001: '',
-      10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87',
-    },
-    name: 'BCH-CATS',
-    symbol: 'BCH-CATS',
-    tokenSymbol: 'ELF',
-    icon: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
-    icon2: '0x265bD28d79400D55a1665707Fa14A72978FA6043',
-    pool: '15.4%',
-  },
-  {
-    pid: 8,
-    lpAddresses: {
-      10001: '',
-      10000: '0x24f011f12Ea45AfaDb1D4245bA15dCAB38B43D13',
-    },
-    tokenAddresses: {
-      10001: '',
-      10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87',
-    },
-    name: 'flexUSD-MIST',
-    symbol: 'flexUSD-MIST',
-    tokenSymbol: 'WBTC',
-    icon: '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72',
-    icon2: '0x5fA664f69c2A4A3ec94FaC3cBf7049BD9CA73129',
-    pool: '7.7%',
-  },
+
 
   // Others
-  {
-    pid: 1,
-    lpAddresses: {
-      10001: '',
-      10000: '0x24f011f12Ea45AfaDb1D4245bA15dCAB38B43D13',
-    },
-    tokenAddresses: {
-      10001: '',
-      10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87',
-    },
-    name: 'flexUSD-FLEX',
-    symbol: 'flexUSD-FLEX',
-    tokenSymbol: 'USDC',
-    icon: '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72',
-    icon2: '0x98Dd7eC28FB43b3C4c770AE532417015fa939Dd3',
-    pool: '8.7%',
-  },
+
 
 ]
