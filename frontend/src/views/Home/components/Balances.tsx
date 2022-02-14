@@ -9,6 +9,7 @@ import Label from '../../../components/Label'
 import Spacer from '../../../components/Spacer'
 import Value from '../../../components/Value'
 import YamIcon from '../../../components/YamIcon'
+import FOGIcon from '../../../assets/img/logo50.png'
 
 import useFarms from '../../../hooks/useFarms'
 import useTokenBalance from '../../../hooks/useTokenBalance'
@@ -99,7 +100,7 @@ const Balances: React.FC = () => {
         <CardContent>
           <StyledBalances>
             <StyledBalance>
-              <YamIcon />
+              <img src={FOGIcon} />
               <Spacer />
               <div style={{ flex: 1 }}>
                 <Label text="Your FOG Balance" />

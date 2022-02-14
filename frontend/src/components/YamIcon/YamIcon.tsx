@@ -1,5 +1,5 @@
 import React from 'react'
-
+import FOGIcon from '../../assets/img/logo50.png'
 interface YamIconProps {
   size?: number
   v1?: boolean
@@ -15,7 +15,7 @@ const YamIcon: React.FC<YamIconProps> = ({ size = 36, v1, v2, v3 }) => (
       filter: v1 ? 'saturate(0.5)' : undefined,
     }}
   >
-    🍣
+    <img src={FOGIcon} />
   </span>
 )
 
