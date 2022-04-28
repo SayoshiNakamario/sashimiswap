@@ -42,13 +42,13 @@ export const contractAddresses = {
   sushi: {
     10000: '0x89C3bCCeD77A7A96816a5110af9bc286Eb2F2F87', // FOGToken address
     // 10001: '0x43a7903E3a839a67192151eE300e11198985E54b', // sushi
-    10001: '', // FOGToken address
+    10001: '0xD0C5199B73E24AFfe813F6b59Aaf1c786be07559', // FOGToken address
     // 10000: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2', // sushi use
   },
   masterChef: {
     10000: '0xCc09C4C02af2F1a9A72fD0be345a96CAb7f2eaEb', // FOGFarming address
     // 10001: '0x245A074cA9814fB46A21562bC70fAB92F8A3F779', // sushi
-    // 10001: '', // FOGFarming address
+    10001: '0x55587E00eF86F953420B302B6b3f275bF9B13ebD', // FOGFarming address
     // 10000: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // sushi use
   },
   weth: {
